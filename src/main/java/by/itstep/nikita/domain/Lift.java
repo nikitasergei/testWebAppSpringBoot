@@ -1,20 +1,24 @@
 package by.itstep.nikita.domain;
 
 import lombok.Data;
+import org.springframework.context.annotation.Scope;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 @Data
 @Entity
+@Scope("prototype")
 public class Lift {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @NotBlank(message = "Заполни поле")
+    @Pattern(regexp = "[A-Z][a-z]*")
+    private String city;
 
     @NotBlank(message = "Заполни поле")
     private String address;
@@ -22,22 +26,22 @@ public class Lift {
     @Pattern(regexp = "29-32-[0-9]{4}")
     private String regNum;
 
-    @Pattern(regexp = "[0-9]{6}")
+    @NotBlank(message = "Заполни меня")
     private String factNum;
 
-    @Pattern(regexp = "[0-9]{4}")
-    private String manufactureYear;
+    @NotBlank(message = "Заполни меня")
+    private String activationDate;
 
-    @Pattern(regexp = "[0-4]")
-    private Integer unit;
+    @NotBlank(message = "Заполни меня")
+    private String ptoDate;
 
-    @Pattern(regexp = "[1-12]")
-    private Integer monthTO2;
-
-    @Pattern(regexp = "[1-31][.][1-12][.20][18<50]")
-    private String ptoData;
+    @NotBlank(message = "Заполни меня")
+    private String to2Month;
 
     private boolean isDeleted = false;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "owner_id")
+    private Owner owner;
 
 }

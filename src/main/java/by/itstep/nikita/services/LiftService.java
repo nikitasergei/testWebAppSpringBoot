@@ -19,7 +19,7 @@ public class LiftService {
 
 
     public Page<Lift> getAll(Pageable pageable) {
-        return null;
+        return liftRepo.getAll(pageable);
     }
 
     public void remove(Lift removeLift) {

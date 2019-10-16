@@ -12,7 +12,7 @@ import java.util.Optional;
 public class JpaAuditingConfiguration {
 
     @Bean
-    public AuditorAware auditorProvider() {
+    public AuditorAware auditorProvider(){
         return () -> Optional.empty();
     }
 
