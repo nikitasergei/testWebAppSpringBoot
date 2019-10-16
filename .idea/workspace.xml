@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1698a6f3-0ff8-4835-9e41-4a7064e37005" name="Default" comment="" />
+    <list default="true" id="1698a6f3-0ff8-4835-9e41-4a7064e37005" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springBootExample.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/LiftRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/OwnerRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/UserRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/LiftService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/MailSenderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/OwnerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resourses/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resourses/templates/lifts.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resourses/templates/parts/navbar.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resourses/templates/parts/pageTemplate.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resourses/templates/parts/pager.ftl" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +72,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -72,7 +90,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.7.RELEASE/spring-boot-autoconfigure-2.1.7.RELEASE.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -184,40 +202,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="springBootExample" />
       <extension name="coverage">
@@ -304,6 +288,7 @@
       <workItem from="1567785126294" duration="8230000" />
       <workItem from="1568042955192" duration="10610000" />
       <workItem from="1568389607381" duration="9461000" />
+      <workItem from="1571251120241" duration="681000" />
     </task>
     <servers />
   </component>
@@ -321,6 +306,17 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.ftl" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
