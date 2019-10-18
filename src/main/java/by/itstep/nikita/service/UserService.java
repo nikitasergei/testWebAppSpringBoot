@@ -126,11 +126,12 @@ public class UserService implements UserDetailsService {
     }
 
 
-    public void updateProfile(User user, String password, String email) {
+    public void updateProfile(User user, String password, String email, String filename) {
         String userEmail = user.getEmail();
-
+        String userFilename = user.getFilename();
         boolean isEmailChanged = (email != null && email.equals(userEmail) || userEmail != null && userEmail.equals(email));
 
+        boolean isFilenameChanged = (filename != null && filename.equals(userFilename) || userFilename != null && userFilename.equals(filename));
         if (isEmailChanged) {
             user.setEmail(email);
 
@@ -143,8 +144,11 @@ public class UserService implements UserDetailsService {
             user.setPassword(passwordEncoder.encode(password));
         }
 
-        userRepo.save(user);
+        if (!isFilenameChanged) {
+            user.setFilename(filename);
+        }
 
+        userRepo.save(user);
         if (isEmailChanged) {
             sendMessage(user);
         }

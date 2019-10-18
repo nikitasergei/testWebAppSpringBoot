@@ -3,23 +3,63 @@
 
 <@pt.page>
     <div class="container mt-5" style="width: 50%">
-    <h2>${username}</h2>
-    ${message?ifExists}
-    <form method="post">
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Password:</label>
-            <div class="col-sm-6">
-                <input type="password" name="password" class="form-control" placeholder="Password" />
-            </div>
+        <h2>${username}</h2>
+
+        <#if filename??>
+            <style>
+                #pic {
+                    display: block;
+                    width: 120px;
+                    height: 120px;
+                    border: 1px solid black;
+                    border-radius: 50%;
+                    margin-bottom: 20px;
+                }
+
+                img {
+                    width: 120px;
+                    height: 120px;
+                    border: 1px solid black;
+                    border-radius: 100%;
+                }
+            </style>
+        <#else>
+            <style>
+                #pic {
+                    display: none;
+                }
+            </style>
+        </#if>
+        <div id="pic">
+            <#if filename??>
+                <img src="/img/${filename}">
+            <#else>
+                <label>Load photo</label>
+            </#if>
         </div>
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Email:</label>
-            <div class="col-sm-6">
-                <input type="email" name="email" class="form-control" placeholder="some@some.com" value="${email!''}" />
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Password:</label>
+                <div class="col-sm-6">
+                    <input type="password" name="password" class="form-control" placeholder="Password"/>
+                </div>
             </div>
-        </div>
-        <input type="hidden" name="_csrf" value="${_csrf.token}" />
-        <button class="btn btn-primary" type="submit">Save</button>
-    </form>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Email:</label>
+                <div class="col-sm-6">
+                    <input type="email" name="email" class="form-control" placeholder="some@some.com"
+                           value="${email!''}"/>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Image:</label>
+                <div class="col-sm-6 p-2 ml-1">
+                    <input type="file" name="file">
+                </div>
+            </div>
+
+            <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+            <button class="btn btn-primary" type="submit">Save</button>
+        </form>
     </div>
 </@pt.page>

@@ -30,6 +30,8 @@ public class User implements UserDetails {
 
     private boolean active;
 
+    private String filename;
+
     private boolean isDeleted = false;
 
     @Email(message = "Email is not correct")
