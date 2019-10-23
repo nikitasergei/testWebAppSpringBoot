@@ -107,4 +107,9 @@ public class RegistrationController {
 
         return "lifts";
     }
+
+    @GetMapping("startPage")
+    public String startPage() {
+        return "startPage";
+    }
 }

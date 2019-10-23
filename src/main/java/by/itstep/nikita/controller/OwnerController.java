@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 import java.util.Map;
+import java.util.Set;
 
 @Controller
 public class OwnerController {
@@ -56,12 +57,6 @@ public class OwnerController {
 
         if (fixOwner != null) {
             ownerService.fixOwner(fixOwner);
-        }
-
-        /*         Show Owner's Lifts          */
-
-        if (ownersLifts != null) {
-            model.addAttribute("ownersLifts", ownersLifts);
         }
         return "owners";
     }
@@ -122,13 +117,5 @@ public class OwnerController {
         }
     }
 
-    @GetMapping("ownersLifts")
-    public String showOwners(Model model,
-                             @PathVariable Owner owner,
-                             @PageableDefault Pageable pageable) {
-        Page<Lift> page = liftService.getAll(pageable);
-        model.addAttribute("page", page);
-        model.addAttribute("url", "/ownersLifts");
-        return "ownersLifts";
-    }
+
 }

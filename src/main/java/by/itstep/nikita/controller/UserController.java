@@ -18,7 +18,6 @@ import java.util.Map;
 import java.util.UUID;
 
 @Controller
-//@RequestMapping
 public class UserController {
     @Autowired
     private UserService userService;
@@ -56,8 +55,9 @@ public class UserController {
     public String getProfile(Model model, @AuthenticationPrincipal User user) {
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());
-        if (user.getFilename() != null) {
-            model.addAttribute("filename", user.getFilename());
+        User currentUser = userService.loadUserByUsername(user.getUsername());
+        if (currentUser.getFilename() != null) {
+            model.addAttribute("filename", currentUser.getFilename());
         }
 
         return "profile";
@@ -71,15 +71,16 @@ public class UserController {
             @RequestParam("file") MultipartFile file
     ) throws IOException {
         String resultFilename;
-        if (file != null) {
+        if (file != null && !file.getOriginalFilename().isEmpty()) {
             File uploadDir = new File(uploadPath);
             if (!uploadDir.exists()) {
                 uploadDir.mkdir();
             }
             String uuidFile = UUID.randomUUID().toString();
             resultFilename = uuidFile + "." + file.getOriginalFilename();
-            file.transferTo(new File(resultFilename));
+            file.transferTo(new File(uploadPath + "/" + resultFilename));
             userService.updateProfile(user, password, email, resultFilename);
+
         } else userService.updateProfile(user, password, email, user.getFilename());
 
         return "redirect:/user/profile";

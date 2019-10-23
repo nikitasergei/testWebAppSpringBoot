@@ -1,11 +1,14 @@
 package by.itstep.nikita.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.springframework.context.annotation.Scope;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
+import java.util.Set;
 
 @Data
 @Entity
@@ -32,16 +35,13 @@ public class Lift {
     @NotBlank(message = "Заполни меня")
     private String activationDate;
 
-    @NotBlank(message = "Заполни меня")
-    private String ptoDate;
-
-    @NotBlank(message = "Заполни меня")
-    private String to2Month;
-
     private boolean isDeleted = false;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "owner_id")
-    private Owner owner;
+    @OneToMany(fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            orphanRemoval = true,
+            mappedBy = "lift")
+    @JsonIgnore
+    Set<TechServiceHistory> servHistory;
 
 }

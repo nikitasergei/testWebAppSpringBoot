@@ -1,5 +1,6 @@
 package by.itstep.nikita.service;
 
+import by.itstep.nikita.domain.Lift;
 import by.itstep.nikita.domain.Owner;
 import by.itstep.nikita.repository.OwnerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class OwnerService {

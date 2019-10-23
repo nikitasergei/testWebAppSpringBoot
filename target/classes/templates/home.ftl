@@ -9,8 +9,7 @@
         </#if>
 
         <div class="container mt-5">
-            <h3 style="color: #1856ff">Это приложение создано для облегчения работы сотрудников ОАО
-                "ГродноЛифт"</h3>
+            <h3 style="color: #1856ff">Sign up, please!</h3>
         </div>
         <div class="container mt-5">
             <#if Session?? && Session.SPRING_SECURITY_LAST_EXCEPTION??>

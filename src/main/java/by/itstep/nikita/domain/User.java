@@ -1,5 +1,6 @@
 package by.itstep.nikita.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
@@ -28,6 +29,9 @@ public class User implements UserDetails {
     @NotBlank(message = "Password confirmation can't be empty")
     private String password;
 
+    @Enumerated(EnumType.STRING)
+    private Stat stat;
+
     private boolean active;
 
     private String filename;
@@ -44,6 +48,13 @@ public class User implements UserDetails {
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     private Set<Roles> roles;
+
+    @OneToMany(fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            orphanRemoval = true,
+            mappedBy = "user")
+    @JsonIgnore
+    Set<TechServiceHistory> servHistory;
 
     public boolean isAdmin() {
         return roles.contains(Roles.ADMIN);

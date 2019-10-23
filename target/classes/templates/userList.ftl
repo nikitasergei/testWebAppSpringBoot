@@ -5,18 +5,18 @@
         <h1>List of users</h1>
         <table class="table">
             <thead class="thead-light">
-            <tr class="table-active">
+            <tr class="table-active" align="center" >
                 <th scope="col">Имя</th>
                 <th scope="col">Роль</th>
                 <th scope="col"> Изменить</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody style="color: #c80201">
             <#list users as user>
-                <tr>
+                <tr class="table-active" align="center" >
                     <td>${user.username}</td>
                     <td><#list user.roles as role>${role}<#sep>, </#list></td>
-                    <td><a href="/user/${user.id}">edit</a></td>
+                    <td><a href="/user/${user.id}">Edit</a></td>
                 </tr>
             </#list>
             </tbody>

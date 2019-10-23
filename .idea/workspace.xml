@@ -1,28 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1698a6f3-0ff8-4835-9e41-4a7064e37005" name="Default" comment="after code correcting">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1698a6f3-0ff8-4835-9e41-4a7064e37005" name="Default" comment="Add TechServHistory">
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/TSHistoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Stat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/TechServiceHistory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/TechServiceHistoryRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/TechServHistoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editHistory.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/history.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/historyList.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/startPage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/config/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/LiftController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/LiftController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/OwnerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/RegistrationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Lift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Lift.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Owner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/LiftRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/LiftRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/OwnerRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/OwnerRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/LiftService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/LiftService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/OwnerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/OwnerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Init_DB.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Add_Admin.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V3__Encode_password.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editLift.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editLift.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editUser.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editUser.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lifts.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lifts.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/owners.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/owners.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ownersLifts.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/pageTemplate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/pageTemplate.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/security.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/security.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/grordoLiftWebApp.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/springBootExample.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/java/by/itstep/nikita/service/CarServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/by/itstep/nikita/service/LiftServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V1__Init_DB.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V2__Add_Admin.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V3__Encode_password.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/editLift.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editLift.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/editUser.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editUser.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/lifts.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/lifts.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/owners.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/owners.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ownersLifts.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/login.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/navbar.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/navbar.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/pageTemplate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/pageTemplate.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/security.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/security.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/profile.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/profile.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/userList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/userList.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,8 +130,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -130,11 +163,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\spring1\src\main\resources\templates\parts" />
+      <recent name="C:\Users\User\Desktop\spring1\src\main\resources\templates" />
       <recent name="C:\Users\Student\Desktop\spring\src\main\resources\db\migration" />
       <recent name="C:\Users\Student\Desktop\spring\src\main\resources" />
       <recent name="C:\Users\Student\Desktop\spring\src\main\resources\db.migration\migration" />
-      <recent name="C:\Users\Student\Desktop\spring\src\main\resources\templates" />
-      <recent name="C:\Users\Student\Desktop\spring\src\main\test\java\by.itstep" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -149,7 +182,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="Spring Boot.Application (1)">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -212,26 +245,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CarServiceTest.saveCarTestNewCarNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springBootExample" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.itstep.nikita.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="by.itstep.nikita.service" />
-      <option name="MAIN_CLASS_NAME" value="by.itstep.nikita.service.CarServiceTest" />
-      <option name="METHOD_NAME" value="saveCarTestNewCarNegative" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+    <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="spring1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.itstep.nikita.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="by.itstep.nikita.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -270,17 +299,17 @@
     <list>
       <item itemvalue="JUnit.CarServiceTest.saveCarTestExistedCarWithChangedVinNegative" />
       <item itemvalue="JUnit.CarServiceTest.saveCarTestExistedCarWithNotChangedVinNegative" />
-      <item itemvalue="JUnit.CarServiceTest.saveCarTestNewCarNegative" />
       <item itemvalue="JUnit.CarServiceTest" />
       <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="Spring Boot.Application (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.Application (1)" />
         <item itemvalue="Spring Boot.Application" />
         <item itemvalue="JUnit.CarServiceTest" />
         <item itemvalue="JUnit.CarServiceTest.saveCarTestExistedCarWithChangedVinNegative" />
         <item itemvalue="JUnit.CarServiceTest.saveCarTestExistedCarWithNotChangedVinNegative" />
-        <item itemvalue="JUnit.CarServiceTest.saveCarTestNewCarNegative" />
       </list>
     </recent_temporary>
   </component>
@@ -319,7 +348,37 @@
       <workItem from="1571340966967" duration="1396000" />
       <workItem from="1571421505453" duration="1773000" />
       <workItem from="1571423340150" duration="1773000" />
-      <workItem from="1571425228706" duration="729000" />
+      <workItem from="1571425228706" duration="1423000" />
+      <workItem from="1571484996978" duration="142000" />
+      <workItem from="1571562014484" duration="1197000" />
+      <workItem from="1571670563957" duration="1777000" />
+      <workItem from="1571672379909" duration="1773000" />
+      <workItem from="1571674211470" duration="1776000" />
+      <workItem from="1571676023612" duration="1775000" />
+      <workItem from="1571677837401" duration="1773000" />
+      <workItem from="1571679649077" duration="1774000" />
+      <workItem from="1571681487391" duration="891000" />
+      <workItem from="1571687057138" duration="1773000" />
+      <workItem from="1571688896144" duration="1766000" />
+      <workItem from="1571690707547" duration="1901000" />
+      <workItem from="1571756406734" duration="1776000" />
+      <workItem from="1571758230766" duration="1776000" />
+      <workItem from="1571760062232" duration="1779000" />
+      <workItem from="1571761961021" duration="1817000" />
+      <workItem from="1571763839747" duration="1777000" />
+      <workItem from="1571765677470" duration="1774000" />
+      <workItem from="1571767539701" duration="1766000" />
+      <workItem from="1571769370282" duration="1770000" />
+      <workItem from="1571771185315" duration="852000" />
+      <workItem from="1571841631716" duration="371000" />
+      <workItem from="1571845183958" duration="1772000" />
+      <workItem from="1571847061926" duration="1772000" />
+      <workItem from="1571848910549" duration="1774000" />
+      <workItem from="1571850729409" duration="1780000" />
+      <workItem from="1571852559492" duration="1774000" />
+      <workItem from="1571854386815" duration="1767000" />
+      <workItem from="1571856222117" duration="1767000" />
+      <workItem from="1571858055407" duration="1614000" />
     </task>
     <task id="LOCAL-00001" summary="after code correcting">
       <created>1571252052629</created>
@@ -328,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571252052629</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add image 4 profile">
+      <created>1571426153350</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571426153350</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -346,6 +412,16 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.ftl" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -361,7 +437,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="after code correcting" />
-    <option name="LAST_COMMIT_MESSAGE" value="after code correcting" />
+    <MESSAGE value="Add image 4 profile" />
+    <MESSAGE value="Add TechServHistory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add TechServHistory" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

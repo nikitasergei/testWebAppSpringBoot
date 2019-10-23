@@ -55,11 +55,6 @@ public class LiftService {
         liftRepo.save(fixLift);
     }
 
-    public Page<Lift> getOwnersLifts(Owner owner, Pageable pageable) {
-        Long id = owner.getId();
-        return liftRepo.findAllByOwnerId(id, pageable);
-    }
-
     public Page<Lift> getByFilter(String indicator, String filter, Pageable pageable) {
         Page<Lift> page;
         switch (indicator) {
@@ -73,14 +68,6 @@ public class LiftService {
             }
             case "activationDate": {
                 page = liftRepo.findByActivationDate(filter, pageable);
-                break;
-            }
-            case "ptoDate": {
-                page = liftRepo.findByPtoDate(filter, pageable);
-                break;
-            }
-            case "to2Month": {
-                page = liftRepo.findByTo2Month(filter, pageable);
                 break;
             }
             case "regNum": {

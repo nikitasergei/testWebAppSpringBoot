@@ -5,7 +5,6 @@ import by.itstep.nikita.domain.User;
 import by.itstep.nikita.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -29,7 +28,7 @@ public class UserService implements UserDetailsService {
     PasswordEncoder passwordEncoder;
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public User loadUserByUsername(String username) throws UsernameNotFoundException {
 
         User user = userRepo.findByUsername(username);
 
@@ -128,10 +127,11 @@ public class UserService implements UserDetailsService {
 
     public void updateProfile(User user, String password, String email, String filename) {
         String userEmail = user.getEmail();
-        String userFilename = user.getFilename();
+        System.out.println(userEmail);
         boolean isEmailChanged = (email != null && email.equals(userEmail) || userEmail != null && userEmail.equals(email));
 
-        boolean isFilenameChanged = (filename != null && filename.equals(userFilename) || userFilename != null && userFilename.equals(filename));
+        boolean isFilenameChanged = (filename != null);
+
         if (isEmailChanged) {
             user.setEmail(email);
 
@@ -144,11 +144,12 @@ public class UserService implements UserDetailsService {
             user.setPassword(passwordEncoder.encode(password));
         }
 
-        if (!isFilenameChanged) {
+        if (isFilenameChanged) {
             user.setFilename(filename);
         }
 
         userRepo.save(user);
+
         if (isEmailChanged) {
             sendMessage(user);
         }

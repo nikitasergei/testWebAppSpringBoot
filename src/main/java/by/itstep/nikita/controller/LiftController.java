@@ -87,7 +87,6 @@ public class LiftController {
     }
 
 
-    // Где должен быть этот метод?
     private String getLifts(@Valid Lift lift, BindingResult bindingResult, Model model,
                             @PageableDefault(sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
         Page<Lift> page = liftService.getAll(pageable);

@@ -1,6 +1,6 @@
 <#macro page>
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="en" xmlns:https="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="UTF-8"/>
         <title>GrodnoLift Web App</title>
@@ -20,7 +20,7 @@
               crossorigin="anonymous">
 
     </head>
-    <body>
+    <body style="background-image: url('http://www.wallon.ru/_ph/2/177139617.jpg'); background-repeat: no-repeat; background-size: 100% ">
 
     <#include "navbar.ftl">
 

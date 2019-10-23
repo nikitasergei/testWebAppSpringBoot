@@ -31,7 +31,7 @@
                     <td>${owner.deleted?then('<a href="owners?fixOwner=${owner.id}">Восстановить</a>',
                         '<a href="owners?removeOwner=${owner.id}">Удалить</a>')}
                     </td>
-                    <td><a href="/ownersLifts?ownersLifts=${owner.id}">Показать все лифты</a></td>
+                    <td><a href="/ownersLifts/${owner.id}">Показать все лифты</a></td>
                 </tr>
             <#else>
                 Owners list is empty!

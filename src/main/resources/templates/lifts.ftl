@@ -1,5 +1,10 @@
 <#import "parts/pageTemplate.ftl" as pt>
 <@pt.page>
+ <#if message??>
+            <div class="alert alert-${messageType}" role="alert">
+                ${message}
+            </div>
+        <#else>
 <#import "parts/pager.ftl" as p>
 <div class="pl-5 pr-5 pt-2">
     <#include "parts/newNav.ftl">
@@ -13,8 +18,6 @@
             <th scope="col">Регистрационный номер</th>
             <th scope="col">Заводской номер</th>
             <th scope="col">Ввод в эксплуатацию</th>
-            <th scope="col">Дата ПТО</th>
-            <th scope="col">Месяц ТО2</th>
             <th scope="col">Is deleted</th>
             <th scope="col">Edit</th>
             <th scope="col">Remove</th>
@@ -33,10 +36,6 @@
                     <td align="center">${lift.factNum}</td></#if>
                 <#if lift.activationDate??>
                     <td align="center">${lift.activationDate}</td></#if>
-                <#if lift.ptoDate??>
-                    <td align="center">${lift.ptoDate}</td></#if>
-                <#if lift.to2Month??>
-                    <td align="center">${lift.to2Month}</td></#if>
                 <#if lift.deleted??>
                     <td align="center">${lift.deleted?then("true","false")}</td>
                 </#if>
@@ -46,12 +45,16 @@
                 </td>
             </tr>
         <#else>
+            <p style="color: #c80201">
             Lifts list is empty!
+            </p>
         </#list>
     </table>
     <@p.pager url page/>
     <a href="/editLift">
         <button type="button" class="btn btn-primary">Добавить лифт</button>
     </a>
-    </@pt.page>
+
 </div>
+ </#if>
+</@pt.page>

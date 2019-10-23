@@ -27,13 +27,9 @@ public interface LiftRepo extends CrudRepository<Lift, Long> {
 
     Page<Lift> findByActivationDate(String activationDate, Pageable pageable);
 
-    Page<Lift> findByTo2Month(String to2Month, Pageable pageable);
-
-    Page<Lift> findByPtoDate(String ptoDate, Pageable pageable);
-
     Page<Lift> findByRegNum(String regNum, Pageable pageable);
 
     Page<Lift> findByFactNum(String factNum, Pageable pageable);
 
-    Page<Lift> findAllByOwnerId(Long id, Pageable pageable);
+//    Page<Lift> findAllByOwnerId(Long id, Pageable pageable);
 }

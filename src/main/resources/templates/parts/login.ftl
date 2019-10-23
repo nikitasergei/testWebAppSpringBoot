@@ -2,7 +2,7 @@
 <#macro login path isRegisterForm>
     <form action="${path}" method="post" xmlns="http://www.w3.org/1999/html">
         <div class="form-group row ml-5">
-            <label class="col-sm-2 col-form-label" style="color: dimgrey; font-weight: bold"> Пользователь: </label>
+            <label class="col-sm-2 col-form-label" style="color: #c80201; font-weight: bold"> Пользователь: </label>
             <div class="col-sm-6">
                 <input type="text" name="username"
                        class="form-control ${(usernameError??)?string('is-invalid', '')}" placeholder="Имя пользователя"
@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="form-group row ml-5">
-            <label class="col-sm-2 col-form-label" style="color: dimgrey; font-weight: bold"> Пароль: </label>
+            <label class="col-sm-2 col-form-label" style="color: #c80201; font-weight: bold"> Пароль: </label>
             <div class="col-sm-6">
                 <input type="password" name="password"
                        class="form-control ${(passwordError??)?string('is-invalid', '')}" placeholder="Пароль"
@@ -29,7 +29,7 @@
         </div>
         <#if isRegisterForm>
             <div class="form-group row ml-5">
-                <label class="col-sm-2 col-form-label" style="color: dimgrey; font-weight: bold"> Повторите
+                <label class="col-sm-2 col-form-label" style="color: #c80201; font-weight: bold"> Повторите
                     пароль: </label>
                 <div class="col-sm-6">
                     <input type="password" name="passwordConfirm"
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="form-group row ml-5">
-                <label class="col-sm-2 col-form-label" style="color: dimgrey; font-weight: bold"> Email: </label>
+                <label class="col-sm-2 col-form-label" style="color: #c80201; font-weight: bold"> Email: </label>
                 <div class="col-sm-6">
                     <input type="email" name="email"
                            class="form-control ${(emailError??)?string('is-invalid', '')}" placeholder="some@some.com"

@@ -50,20 +50,12 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="date" name="ptoDate" class="form-control ${(ptoDateError??)?string('is-invalid', '')}"
-                           value="<#if lift?? && lift.ptoDate??>${lift.ptoDate}</#if>"
-                           placeholder="Enter the pto Date">
+                    <input type="text" name="owner"
+                           class="form-control ${(ownerError??)?string('is-invalid', '')}"
+                           value="<#if lift?? && lift.owner??>${lift.owner.name}</#if>"
+                           placeholder="Chose the owner">
                     <div class="invalid-feedback">
-                        <#if ptoDateError??>${ptoDateError}</#if>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="month" name="to2Month"
-                           class="form-control ${(to2MonthError??)?string('is-invalid', '')}"
-                         value="<#if lift?? && lift.to2Month??>${lift.to2Month}</#if>"
-                    placeholder="Enter the to2 Month">
-                    <div class="invalid-feedback">
-                        <#if to2MonthError??>${to2MonthError}</#if>
+                        <#if ownerError??>${ownerError}</#if>
                     </div>
                 </div>
                 <div class="form-group mt-2">
