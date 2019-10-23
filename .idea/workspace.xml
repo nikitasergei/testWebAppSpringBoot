@@ -1,62 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1698a6f3-0ff8-4835-9e41-4a7064e37005" name="Default" comment="Add TechServHistory">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/TSHistoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Stat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/TechServiceHistory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/TechServiceHistoryRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/TechServHistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editHistory.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/history.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/historyList.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/startPage.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/config/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/LiftController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/LiftController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/OwnerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Lift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Lift.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Owner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/LiftRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/LiftRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/OwnerRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/OwnerRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/LiftService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/LiftService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/OwnerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/OwnerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editLift.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editLift.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editUser.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editUser.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lifts.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lifts.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/owners.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/owners.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ownersLifts.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/pageTemplate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/pageTemplate.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/security.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/security.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/by/itstep/nikita/service/CarServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/by/itstep/nikita/service/LiftServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/editLift.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editLift.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/editUser.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editUser.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/lifts.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/lifts.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/owners.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/owners.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/ownersLifts.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/login.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/navbar.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/navbar.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/pageTemplate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/pageTemplate.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/security.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/security.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/profile.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/profile.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/userList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/userList.ftl" afterDir="false" />
-    </list>
+    <list default="true" id="1698a6f3-0ff8-4835-9e41-4a7064e37005" name="Default" comment="Add TechServHistory" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -378,7 +323,7 @@
       <workItem from="1571852559492" duration="1774000" />
       <workItem from="1571854386815" duration="1767000" />
       <workItem from="1571856222117" duration="1767000" />
-      <workItem from="1571858055407" duration="1614000" />
+      <workItem from="1571858055407" duration="1749000" />
     </task>
     <task id="LOCAL-00001" summary="after code correcting">
       <created>1571252052629</created>
@@ -394,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571426153350</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add TechServHistory">
+      <created>1571859712569</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571859712569</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
