@@ -1,6 +1,5 @@
 package by.itstep.nikita.repository;
 
-import by.itstep.nikita.domain.Lift;
 import by.itstep.nikita.domain.Owner;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -8,7 +7,6 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
-import java.util.Set;
 
 @Component
 public interface OwnerRepo extends CrudRepository<Owner, Long> {
@@ -21,6 +19,4 @@ public interface OwnerRepo extends CrudRepository<Owner, Long> {
     Page<Owner> findByAddress(String address, Pageable pageable);
 
     Optional<Owner> findById(Long id);
-
-
 }

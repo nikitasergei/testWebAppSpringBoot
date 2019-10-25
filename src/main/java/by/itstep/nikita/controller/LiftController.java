@@ -2,6 +2,7 @@ package by.itstep.nikita.controller;
 
 import by.itstep.nikita.domain.Lift;
 import by.itstep.nikita.service.LiftService;
+import by.itstep.nikita.service.OwnerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -23,13 +24,16 @@ public class LiftController {
     @Autowired
     LiftService liftService;
 
+    @Autowired
+    OwnerService ownerService;
+
     @GetMapping("lifts")
     public String listOfLifts(Model model,
                               @RequestParam(required = false, defaultValue = "") String filter,
                               @RequestParam(required = false, defaultValue = "") String filterBy,
                               @RequestParam(required = false, defaultValue = "") Lift removeLift,
                               @RequestParam(required = false, defaultValue = "") Lift fixLift,
-                              @PageableDefault(sort = {"address"}, direction = Sort.Direction.ASC) Pageable pageable) {
+                              @PageableDefault(sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
 
         Page<Lift> page;
         if (filter != null && !filter.isEmpty())
@@ -45,7 +49,6 @@ public class LiftController {
         }
 
         /*         Fix Lift          */
-
         if (fixLift != null) {
             liftService.fixLift(fixLift);
         }
@@ -53,7 +56,8 @@ public class LiftController {
     }
 
     @GetMapping("editLift")
-    public String addLift() {
+    public String addLift(Model model, Pageable pageable) {
+        model.addAttribute("ownersSet", ownerService.getOwners(pageable));
         return "editLift";
     }
 
@@ -63,7 +67,7 @@ public class LiftController {
                              @PageableDefault(sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
         Lift editLift = liftService.getById(id);
         Page<Lift> page = liftService.getAll(pageable);
-        model.addAttribute("page", page);
+        model.addAttribute("ownersSet", ownerService.getOwners(pageable));
         if (editLift != null) {
             model.addAttribute("lift", editLift);
         }
@@ -71,18 +75,23 @@ public class LiftController {
     }
 
     @PostMapping("editLift")
-    public String addLift(@Valid Lift lift, BindingResult bindingResult, Model model,
+    public String addLift(@Valid Lift lift,
+                          @RequestParam String ownerName,
+                          BindingResult bindingResult,
+                          Model model,
                           @PageableDefault(sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
-
-
+        lift.setOwner(ownerService.searchByName(ownerName));
         return getLifts(lift, bindingResult, model, pageable);
     }
 
     @PostMapping("editLift/{id}")
-    public String updateLift(@Valid Lift lift, BindingResult bindingResult, Model model,
+    public String updateLift(@Valid Lift lift,
+                             @RequestParam String ownerName,
+                             BindingResult bindingResult,
+                             Model model,
                              @PathVariable Long id,
                              @PageableDefault(sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
-
+        lift.setOwner(ownerService.searchByName(ownerName));
         return getLifts(lift, bindingResult, model, pageable);
     }
 

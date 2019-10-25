@@ -19,7 +19,7 @@ public class TSHistoryController {
     TechServHistoryService techServHistoryService;
 
     @GetMapping("history")
-    public String allHistory(
+    public String showHistories(
             Model model,
             @PageableDefault(sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable
     ) {

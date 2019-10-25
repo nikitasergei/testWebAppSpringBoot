@@ -1,16 +1,16 @@
 package by.itstep.nikita.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.context.annotation.Scope;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import java.util.Set;
 
-@Data
+@Getter
+@Setter
 @Entity
 @Scope("prototype")
 public class Lift {
@@ -41,7 +41,10 @@ public class Lift {
             cascade = CascadeType.ALL,
             orphanRemoval = true,
             mappedBy = "lift")
-    @JsonIgnore
-    Set<TechServiceHistory> servHistory;
+    Set<TechServiceHistory> serviceHistory;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "owner_id")
+    private Owner owner;
 
 }

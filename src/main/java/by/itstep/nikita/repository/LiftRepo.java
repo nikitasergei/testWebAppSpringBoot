@@ -11,7 +11,6 @@ import java.util.Optional;
 
 @Component
 public interface LiftRepo extends CrudRepository<Lift, Long> {
-    Page<Lift> findById(Long id, Pageable pageable);
 
     Optional<Lift> findById(Long id);
 
@@ -31,5 +30,5 @@ public interface LiftRepo extends CrudRepository<Lift, Long> {
 
     Page<Lift> findByFactNum(String factNum, Pageable pageable);
 
-//    Page<Lift> findAllByOwnerId(Long id, Pageable pageable);
+    Page<Lift> findByOwnerId(Long id, Pageable pageable);
 }

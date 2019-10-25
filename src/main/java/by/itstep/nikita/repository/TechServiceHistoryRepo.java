@@ -7,7 +7,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface TechServiceHistoryRepo extends CrudRepository<TechServiceHistory, Long> {
 
-    Page<TechServiceHistory> findAll (Pageable pageable);
-
-
+    Page<TechServiceHistory> findAll(Pageable pageable);
 }

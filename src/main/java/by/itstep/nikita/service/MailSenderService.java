@@ -15,7 +15,17 @@ public class MailSenderService {
     @Value("${spring.mail.username}")
     private String username;
 
-    public void send(String emailTo, String subject, String message){
+
+    /**
+     * This method send mail with content @param message to @param subject on @param emailTo
+     *
+     * @param emailTo - address to send mail
+     * @param subject - subject of mail
+     * @param message - message of mail
+     *
+     *
+     */
+    public void send(String emailTo, String subject, String message) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
 
         mailMessage.setFrom(username);
@@ -25,5 +35,4 @@ public class MailSenderService {
 
         javaMailSender.send(mailMessage);
     }
-
 }

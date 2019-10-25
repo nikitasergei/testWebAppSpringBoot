@@ -1,6 +1,5 @@
 package by.itstep.nikita.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
@@ -14,9 +13,9 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name = "users")
 @Getter
 @Setter
+@Table(name = "users")
 public class User implements UserDetails {
 
     @Id
@@ -30,7 +29,7 @@ public class User implements UserDetails {
     private String password;
 
     @Enumerated(EnumType.STRING)
-    private Stat stat;
+    private Stat stat;          //Add field to use
 
     private boolean active;
 
@@ -53,8 +52,7 @@ public class User implements UserDetails {
             cascade = CascadeType.ALL,
             orphanRemoval = true,
             mappedBy = "user")
-    @JsonIgnore
-    Set<TechServiceHistory> servHistory;
+    Set<TechServiceHistory> serviceHistory;
 
     public boolean isAdmin() {
         return roles.contains(Roles.ADMIN);

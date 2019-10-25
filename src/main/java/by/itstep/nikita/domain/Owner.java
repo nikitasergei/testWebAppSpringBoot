@@ -4,7 +4,6 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 import java.util.Set;
 
 @Data
@@ -22,5 +21,11 @@ public class Owner {
     private String address;
 
     private boolean isDeleted = false;
+
+    @OneToMany(fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            orphanRemoval = true,
+            mappedBy = "owner")
+    private Set<Lift> liftSet;
 
 }

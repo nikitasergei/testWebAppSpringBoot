@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 import java.util.Map;
-import java.util.Set;
 
 @Controller
 public class OwnerController {
@@ -34,19 +33,17 @@ public class OwnerController {
                                @RequestParam(required = false, defaultValue = "") String filterBy,
                                @RequestParam(required = false, defaultValue = "") Owner removeOwner,
                                @RequestParam(required = false, defaultValue = "") Owner fixOwner,
-                               @RequestParam(required = false, defaultValue = "") Owner ownersLifts,
                                @PageableDefault(sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
 
         Page<Owner> page;
-        if (filter != null && !filter.isEmpty()) {
+        if (filter != null && !filter.isEmpty())
             page = ownerService.getByFilter(filterBy, filter, pageable);
-        } else {
+        else
             page = ownerService.getAll(pageable);
-        }
-        model.addAttribute("page", page);
-        model.addAttribute("url", "/owner");
-        model.addAttribute("filter", filter);
 
+        model.addAttribute("page", page);
+        model.addAttribute("url", "/owners");
+        model.addAttribute("filter", filter);
 
         /*         Remove Owner          */
         if (removeOwner != null) {
@@ -54,7 +51,6 @@ public class OwnerController {
         }
 
         /*         Fix Owner          */
-
         if (fixOwner != null) {
             ownerService.fixOwner(fixOwner);
         }
@@ -117,5 +113,27 @@ public class OwnerController {
         }
     }
 
+    @GetMapping("ownersLifts/{id}")
+    public String showOwnersLifts(Model model,
+                                  @PathVariable Long id,
+                                  @PageableDefault(sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
+        Owner currentOwner = ownerService.getById(id);
+        Page<Lift> ownersLifts = liftService.getByOwnersId(id, pageable);
+        model.addAttribute("page", ownersLifts);
+        model.addAttribute("url", "/ownersLifts");
 
+        return "ownersLifts";
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+

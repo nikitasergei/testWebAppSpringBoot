@@ -8,8 +8,6 @@
             <div class="dropdown-item" name="regNum">регистрационному номеру</div>
             <div class="dropdown-item" name="factNum">заводскому номеру</div>
             <div class="dropdown-item" name="activationDate">дате ввода в эксплуатацию</div>
-            <div class="dropdown-item" name="ptoDate">дате пто</div>
-            <div class="dropdown-item" name="to2Month">месяце ТО-2</div>
         </div>
         <label style="display: none" id="filtVal">ygjg</label>
 

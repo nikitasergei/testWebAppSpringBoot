@@ -2,6 +2,7 @@ package by.itstep.nikita.config;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+/* This is the class 4 coding user's password */
 public class DumpPasswordEncoder implements PasswordEncoder {
 
 

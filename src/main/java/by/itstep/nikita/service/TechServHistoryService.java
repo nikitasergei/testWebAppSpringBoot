@@ -13,11 +13,19 @@ public class TechServHistoryService {
     @Autowired
     TechServiceHistoryRepo techServiceHistoryRepo;
 
+    /**
+     * @param pageable
+     * @return all TechServiceHistories as page
+     */
     public Page<TechServiceHistory> getAll(Pageable pageable) {
         return techServiceHistoryRepo.findAll(pageable);
     }
 
-    public boolean addTechServiceHistory (TechServiceHistory techServiceHistory){
+    /**
+     * @param techServiceHistory - techServiceHistory to save
+     * @return true if @param techServiceHistory was saved
+     */
+    public boolean addTechServiceHistory(TechServiceHistory techServiceHistory) {
         techServiceHistoryRepo.save(techServiceHistory);
         return true;
     }

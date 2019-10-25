@@ -34,7 +34,9 @@
                     <td><a href="/ownersLifts/${owner.id}">Показать все лифты</a></td>
                 </tr>
             <#else>
-                Owners list is empty!
+                <p style="color: #c80201">
+                    Owners list is empty!
+                </p>
             </#list>
         </table>
         <@p.pager url page/>
