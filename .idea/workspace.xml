@@ -2,44 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1698a6f3-0ff8-4835-9e41-4a7064e37005" name="Default" comment="Add TechServHistory">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Init_DB.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Add_Admin.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V3__Encode_password.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/ownersLifts.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/District.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/techHistory.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_beta_3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/DTO/CaptchaResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/DTO/CaptchaResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/config/DumpPasswordEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/config/DumpPasswordEncoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/config/JpaAuditingConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/config/JpaAuditingConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/LiftController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/LiftController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/OwnerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/TSHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/TSHistoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Lift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Lift.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Owner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Stat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Stat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Roles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Roles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/Stat.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/TechServiceHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/TechServiceHistory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/LiftRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/LiftRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/OwnerRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/OwnerRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/TechServiceHistoryRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/repository/TechServiceHistoryRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/LiftService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/LiftService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/MailSenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/MailSenderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/OwnerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/OwnerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/TechServHistoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/TechServHistoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/nikita/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Init_DB.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Add_Admin.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V3__Encode_password.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editLift.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editLift.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/owners.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/owners.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/newNav.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/newNav.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/history.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/history.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lifts.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lifts.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/historyList.ftl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/by/itstep/nikita/service/LiftServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring1.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/editLift.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editLift.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/owners.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/owners.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/newNav.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/newNav.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V1__Init_DB.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V2__Add_Admin.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V3__Encode_password.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/history.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/history.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/lifts.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/lifts.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/historyList.ftl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/profile.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/profile.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/3201726d-7005-4892-8450-13bc425a70f7.Без названия.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/ba4a4eae-687e-4990-aa7f-5847720bc56e.Без названия.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/d6d95c0c-43cf-4665-a4f1-284ca00e4e5d.Без названия.jfif" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,8 +113,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -380,6 +378,28 @@
       <workItem from="1572017915576" duration="1455000" />
       <workItem from="1572019731526" duration="486000" />
       <workItem from="1572020287229" duration="749000" />
+      <workItem from="1572025565647" duration="1273000" />
+      <workItem from="1572027516007" duration="824000" />
+      <workItem from="1572113677829" duration="420000" />
+      <workItem from="1572277981137" duration="1768000" />
+      <workItem from="1572279853154" duration="1774000" />
+      <workItem from="1572281667923" duration="1779000" />
+      <workItem from="1572283535047" duration="1773000" />
+      <workItem from="1572285347394" duration="1395000" />
+      <workItem from="1572287859388" duration="1773000" />
+      <workItem from="1572289697299" duration="1765000" />
+      <workItem from="1572291528680" duration="717000" />
+      <workItem from="1572457134144" duration="1082000" />
+      <workItem from="1572458980713" duration="1741000" />
+      <workItem from="1572461234107" duration="1748000" />
+      <workItem from="1572463065432" duration="1773000" />
+      <workItem from="1572464885945" duration="1776000" />
+      <workItem from="1572539944443" duration="599000" />
+      <workItem from="1572543780800" duration="1758000" />
+      <workItem from="1572545597956" duration="1756000" />
+      <workItem from="1572547416795" duration="1766000" />
+      <workItem from="1572549259422" duration="787000" />
+      <workItem from="1572551217677" duration="1623000" />
     </task>
     <task id="LOCAL-00001" summary="after code correcting">
       <created>1571252052629</created>

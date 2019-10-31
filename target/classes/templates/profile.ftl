@@ -1,10 +1,8 @@
 <#import "parts/pageTemplate.ftl" as pt>
-
-
+    
 <@pt.page>
     <div class="container mt-5" style="width: 50%">
         <h2>${username}</h2>
-
         <#if filename??>
             <style>
                 #pic {

@@ -7,6 +7,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class TechServHistoryService {
 
@@ -30,4 +32,21 @@ public class TechServHistoryService {
         return true;
     }
 
+    public Optional<TechServiceHistory> getHistory(Long id) {
+        return techServiceHistoryRepo.findById(id);
+    }
+
+    public Page<TechServiceHistory> getLiftHistories(Long liftId, Pageable pageable) {
+        return techServiceHistoryRepo.findAllByLiftId(liftId, pageable);
+    }
+
+    public void setDone(TechServiceHistory done) {
+        done.setDone(false);
+        techServiceHistoryRepo.save(done);
+    }
+
+    public void setNotDone(TechServiceHistory notDone) {
+        notDone.setDone(true);
+        techServiceHistoryRepo.save(notDone);
+    }
 }

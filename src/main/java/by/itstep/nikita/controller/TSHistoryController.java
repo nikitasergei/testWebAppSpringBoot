@@ -9,22 +9,30 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class TSHistoryController {
     @Autowired
     TechServHistoryService techServHistoryService;
 
+
     @GetMapping("history")
-    public String showHistories(
-            Model model,
-            @PageableDefault(sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable
+    public String showHistories(Model model,
+                                @RequestParam(required = false, defaultValue = "") TechServiceHistory done,
+                                @RequestParam(required = false, defaultValue = "") TechServiceHistory notDone,
+                                @PageableDefault(sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable
     ) {
-        Page<TechServiceHistory> histories = techServHistoryService.getAll(pageable);
-        model.addAttribute("page", histories);
+        if (done != null) {
+            techServHistoryService.setDone(done);
+        }
+
+        if (notDone != null) {
+            techServHistoryService.setNotDone(notDone);
+        }
+
+        Page<TechServiceHistory> page = techServHistoryService.getAll(pageable);
+        model.addAttribute("page", page);
         model.addAttribute("url", "/history");
         return "history";
     }
@@ -57,6 +65,18 @@ public class TSHistoryController {
             model.addAttribute("usingHistory", techServHistoryService);
             return "history";
         }
+    }
+
+    @GetMapping("techHistory/{id}")
+    public String showLiftHistory(Model model,
+                                  @PathVariable Long id,
+
+                                  @PageableDefault(sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
+        Page<TechServiceHistory> liftHistories = techServHistoryService.getLiftHistories(id, pageable);
+        model.addAttribute("page", liftHistories);
+        model.addAttribute("url", "/techHistory");
+
+        return "techHistory";
     }
 }
 

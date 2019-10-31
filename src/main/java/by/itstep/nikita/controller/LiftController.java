@@ -1,5 +1,6 @@
 package by.itstep.nikita.controller;
 
+import by.itstep.nikita.domain.District;
 import by.itstep.nikita.domain.Lift;
 import by.itstep.nikita.service.LiftService;
 import by.itstep.nikita.service.OwnerService;
@@ -43,12 +44,10 @@ public class LiftController {
         model.addAttribute("url", "/lifts");
         model.addAttribute("filter", filter);
 
-        /*         Remove Lift          */
         if (removeLift != null) {
             liftService.remove(removeLift);
         }
 
-        /*         Fix Lift          */
         if (fixLift != null) {
             liftService.fixLift(fixLift);
         }
@@ -58,6 +57,7 @@ public class LiftController {
     @GetMapping("editLift")
     public String addLift(Model model, Pageable pageable) {
         model.addAttribute("ownersSet", ownerService.getOwners(pageable));
+        model.addAttribute("districtSet", District.values());
         return "editLift";
     }
 
@@ -68,6 +68,7 @@ public class LiftController {
         Lift editLift = liftService.getById(id);
         Page<Lift> page = liftService.getAll(pageable);
         model.addAttribute("ownersSet", ownerService.getOwners(pageable));
+        model.addAttribute("districtSet", District.values());
         if (editLift != null) {
             model.addAttribute("lift", editLift);
         }
@@ -77,21 +78,25 @@ public class LiftController {
     @PostMapping("editLift")
     public String addLift(@Valid Lift lift,
                           @RequestParam String ownerName,
+                          @RequestParam String district,
                           BindingResult bindingResult,
                           Model model,
                           @PageableDefault(sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
         lift.setOwner(ownerService.searchByName(ownerName));
+        lift.setDistrict(District.valueOf(district));
         return getLifts(lift, bindingResult, model, pageable);
     }
 
     @PostMapping("editLift/{id}")
     public String updateLift(@Valid Lift lift,
                              @RequestParam String ownerName,
+                             @RequestParam String district,
                              BindingResult bindingResult,
                              Model model,
                              @PathVariable Long id,
                              @PageableDefault(sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
         lift.setOwner(ownerService.searchByName(ownerName));
+        lift.setDistrict(District.valueOf(district));
         return getLifts(lift, bindingResult, model, pageable);
     }
 

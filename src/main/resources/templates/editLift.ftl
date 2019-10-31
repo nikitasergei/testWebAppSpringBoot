@@ -49,7 +49,7 @@
                         <#if activationDateError??>${activationDateError}</#if>
                     </div>
                 </div>
-                <div>
+                <div class="form-group">
                     <select class="custom-select" size="1" name="ownerName">
                         <#if ownersSet??>
                             <#list ownersSet as owners>
@@ -58,16 +58,15 @@
                         </#if>
                     </select>
                 </div>
-
-                <#--                <div class="form-group">-->
-                <#--                    <input type="text" name="owner"-->
-                <#--                           class="form-control ${(ownerError??)?string('is-invalid', '')}"-->
-                <#--                           value="<#if lift?? && lift.owner??>${lift.owner.name}</#if>"-->
-                <#--                           placeholder="Chose the owner">-->
-                <#--                    <div class="invalid-feedback">-->
-                <#--                        <#if ownerError??>${ownerError}</#if>-->
-                <#--                    </div>-->
-                <#--                </div>-->
+                <div class="form-group">
+                    <select class="custom-select" size="1" name="district">
+                        <#if districtSet??>
+                            <#list districtSet as districts>
+                                <option>${districts}</option>
+                            </#list>
+                        </#if>
+                    </select>
+                </div>
                 <div class="form-group mt-2">
                     <input type="submit" class="btn btn-primary" value="Submit">
                 </div>

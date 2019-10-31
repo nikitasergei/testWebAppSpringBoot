@@ -1,5 +1,6 @@
 package by.itstep.nikita.service;
 
+import by.itstep.nikita.domain.District;
 import by.itstep.nikita.domain.Lift;
 import by.itstep.nikita.repository.LiftRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -123,7 +124,16 @@ public class LiftService {
         return lift.orElse(null);
     }
 
+    /**
+     * @param id       - owner's id
+     * @param pageable
+     * @return list of lifts as a page
+     */
     public Page<Lift> getByOwnersId(Long id, Pageable pageable) {
         return liftRepo.findByOwnerId(id, pageable);
+    }
+
+    public Page<Lift> getByDistrict(District district, Pageable pageable) {
+        return liftRepo.findByDistrict(district, pageable);
     }
 }

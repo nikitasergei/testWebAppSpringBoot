@@ -36,5 +36,5 @@ public class TechServiceHistory {
     @JoinColumn(name = "user_id")
     private User user;
 
-    boolean isDone = true;         //Add to ftl possibility to change field
+    boolean isDone = false;         //Add to ftl possibility to change field
 }

@@ -1,0 +1,5 @@
+package by.itstep.nikita.domain;
+
+public enum District {
+    DISTRICT_1, DISTRICT_2, DISTRICT_3, DISTRICT_4, DISTRICT_LIDA, DISTRICT_VOLKOVYSK, DISTRICT_SLONIM, DISTRICT_SMORGON;
+}

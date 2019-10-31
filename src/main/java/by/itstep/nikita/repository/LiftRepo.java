@@ -1,5 +1,6 @@
 package by.itstep.nikita.repository;
 
+import by.itstep.nikita.domain.District;
 import by.itstep.nikita.domain.Lift;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -31,4 +32,6 @@ public interface LiftRepo extends CrudRepository<Lift, Long> {
     Page<Lift> findByFactNum(String factNum, Pageable pageable);
 
     Page<Lift> findByOwnerId(Long id, Pageable pageable);
+
+    Page<Lift> findByDistrict(District district, Pageable pageable);
 }

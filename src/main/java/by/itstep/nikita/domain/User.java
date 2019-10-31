@@ -28,9 +28,6 @@ public class User implements UserDetails {
     @NotBlank(message = "Password confirmation can't be empty")
     private String password;
 
-    @Enumerated(EnumType.STRING)
-    private Stat stat;          //Add field to use
-
     private boolean active;
 
     private String filename;

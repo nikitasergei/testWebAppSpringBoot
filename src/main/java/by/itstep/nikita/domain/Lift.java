@@ -47,4 +47,6 @@ public class Lift {
     @JoinColumn(name = "owner_id")
     private Owner owner;
 
+    private District district;
+
 }
