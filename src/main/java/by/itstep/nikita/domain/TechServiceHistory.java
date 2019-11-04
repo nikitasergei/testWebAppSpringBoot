@@ -18,13 +18,13 @@ public class TechServiceHistory {
     private Long id;
 
     @NotBlank(message = "Заполни меня")
-    private String ptoDate;     //This field will be changed on Date
+    private String ptoDate;
 
     @NotBlank(message = "Заполни меня")
-    private String to2Month;        //This field will be changed on Date
+    private String to2Month;
 
     @NotBlank(message = "Заполни меня")
-    private String to1Date;        //This field will be changed on Date
+    private String to1Date;
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
@@ -36,5 +36,5 @@ public class TechServiceHistory {
     @JoinColumn(name = "user_id")
     private User user;
 
-    boolean isDone = false;         //Add to ftl possibility to change field
+    boolean isDone = false;
 }

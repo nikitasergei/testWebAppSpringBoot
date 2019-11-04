@@ -32,11 +32,6 @@
                            value="<#if techServiceHistory?? && techServiceHistory.to2Month?? >${techServiceHistory.to2Month}</#if>"
                            placeholder="Enter the TO2 Date">
                 </div>
-                <#--                <div class="form-group">-->
-                <#--                    <input type="text" name="done"-->
-                <#--                           value="<#if techServiceHistory??> ${techServiceHistory.done?then( "true"," false")}</#if>"-->
-                <#--                           placeholder="Enter the owner Id">-->
-                <#--                </div>-->
                 <div class="form-group">
                     <input type="text" name="user"
                            class="form-control ${(userError??)?string('is-invalid', '')}"

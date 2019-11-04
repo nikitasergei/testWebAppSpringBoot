@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Scope;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
+import java.util.Date;
 import java.util.Set;
 
 @Getter
